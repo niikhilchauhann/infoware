@@ -22,6 +22,8 @@ class _CustomStepperState extends State<CustomStepper> {
   final _weightKey = GlobalKey<FormState>();
   final _email = TextEditingController();
   final _password = TextEditingController();
+  final _city = TextEditingController();
+  final _state = TextEditingController();
   int _heightInCm = 0;
   int initialAge = 16;
   int currentStep = 0;
@@ -198,7 +200,7 @@ class _CustomStepperState extends State<CustomStepper> {
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   textCapitalization: TextCapitalization.words,
                   keyboardType: TextInputType.emailAddress,
-                  controller: _email,
+                  controller: _city,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'This is a required field';
@@ -226,7 +228,7 @@ class _CustomStepperState extends State<CustomStepper> {
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   textCapitalization: TextCapitalization.words,
                   keyboardType: TextInputType.visiblePassword,
-                  controller: _password,
+                  controller: _state,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'This is a required field';
